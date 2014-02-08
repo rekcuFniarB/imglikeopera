@@ -286,7 +286,9 @@ var ILO = {
           aObject.removeAttribute("ilo-ph-fix");
         
         if (aObject.hasAttribute("src")) {
-          aObject.setAttribute("src", aObject.getAttribute("src"));
+          var srcvalue = aObject.getAttribute("src");
+          aObject.setAttribute("src", "");
+          aObject.setAttribute("src", srcvalue);
         }
         else if (aObject.hasAttribute("data")) {
           let dbl = aObject.cloneNode(true),
